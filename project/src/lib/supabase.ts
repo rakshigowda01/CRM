@@ -1,0 +1,142 @@
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Missing Supabase environment variables');
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+export type Database = {
+  public: {
+    Tables: {
+      students: {
+        Row: {
+          id: string;
+          studentname: string;
+          gender: string;
+          contactnumber: string;
+          fathername: string;
+          mothername: string;
+          parentsnumber: string;
+          studentmailid: string;
+          address: string;
+          pincode: string;
+          state: string;
+          class: string;
+          year: number;
+          collegeschool: string;
+          entranceexam: string;
+          stream: string;
+          rank?: number;
+          board: string;
+          district: string;
+          city: string;
+          dateofbirth?: string;
+          category: string;
+          examspreparing: string[];
+          marks10th: number;
+          marks12th?: number;
+          graduationmarks?: number;
+          institutionname: string;
+          admissionstatus: string;
+          followupstatus: string;
+          callstatus?: string;
+          calloutcome?: string;
+          notes?: string;
+          assignedto?: string;
+          assignedexecutive?: string;
+          tags: string[];
+          createdat: string;
+          updatedat: string;
+          createdby?: string;
+          lastupdatedby?: string;
+        };
+        Insert: {
+          id?: string;
+          studentname: string;
+          gender: string;
+          contactnumber: string;
+          fathername: string;
+          mothername: string;
+          parentsnumber: string;
+          studentmailid: string;
+          address: string;
+          pincode: string;
+          state: string;
+          class: string;
+          year: number;
+          collegeschool: string;
+          entranceexam: string;
+          stream: string;
+          rank?: number;
+          board: string;
+          district: string;
+          city: string;
+          dateofbirth?: string;
+          category?: string;
+          examspreparing?: string[];
+          marks10th?: number;
+          marks12th?: number;
+          graduationmarks?: number;
+          institutionname: string;
+          admissionstatus?: string;
+          followupstatus?: string;
+          callstatus?: string;
+          calloutcome?: string;
+          notes?: string;
+          assignedto?: string;
+          assignedexecutive?: string;
+          tags?: string[];
+          createdat?: string;
+          updatedat?: string;
+          createdby?: string;
+          lastupdatedby?: string;
+        };
+        Update: {
+          id?: string;
+          studentname?: string;
+          gender?: string;
+          contactnumber?: string;
+          fathername?: string;
+          mothername?: string;
+          parentsnumber?: string;
+          studentmailid?: string;
+          address?: string;
+          pincode?: string;
+          state?: string;
+          class?: string;
+          year?: number;
+          collegeschool?: string;
+          entranceexam?: string;
+          stream?: string;
+          rank?: number;
+          board?: string;
+          district?: string;
+          city?: string;
+          dateofbirth?: string;
+          category?: string;
+          examspreparing?: string[];
+          marks10th?: number;
+          marks12th?: number;
+          graduationmarks?: number;
+          institutionname?: string;
+          admissionstatus?: string;
+          followupstatus?: string;
+          callstatus?: string;
+          calloutcome?: string;
+          notes?: string;
+          assignedto?: string;
+          assignedexecutive?: string;
+          tags?: string[];
+          createdat?: string;
+          updatedat?: string;
+          createdby?: string;
+          lastupdatedby?: string;
+        };
+      };
+    };
+  };
+};
